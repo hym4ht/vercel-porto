@@ -8,7 +8,7 @@ function Home() {
       <div className="text-center p-8">
         <SplitText 
           tag="h1"
-          text="Welcome to DevFolio"
+          text="Welcome to My Portfolio"
           splitType="chars"
           delay={50}
           className="text-5xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600 mb-4"

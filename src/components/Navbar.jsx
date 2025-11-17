@@ -21,7 +21,7 @@ function Navbar() {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center gap-2 text-white text-xl font-bold">
               <Code className="w-7 h-7" />
-              <span>DevFolio</span>
+              <span>My Portfolio</span>
             </Link>
           </div>
 

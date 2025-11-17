@@ -87,6 +87,7 @@ const SplitText = ({
               duration,
               ease,
               stagger: delay / 1000,
+              clearProps: "transform,opacity",
               scrollTrigger: {
                 trigger: el,
                 start,
@@ -98,8 +99,7 @@ const SplitText = ({
                 animationCompletedRef.current = true;
                 onLetterAnimationComplete?.();
               },
-              willChange: 'transform, opacity',
-              force3D: true
+              force3D: true // <-- Diaktifkan kembali
             }
           );
         }
@@ -140,7 +140,6 @@ const SplitText = ({
     const style = {
       textAlign,
       wordWrap: 'break-word',
-      willChange: 'transform, opacity'
     };
     const classes = `split-parent overflow-hidden inline-block whitespace-normal ${className}`;
     switch (tag) {

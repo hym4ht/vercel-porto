@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import Aurora from './components/Aurora'; // <-- Impor Aurora
+import Aurora from './components/Aurora'; // <-- Diaktifkan kembali
 import './App.css';
 
 function App() {

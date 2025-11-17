@@ -8,10 +8,10 @@ function Home() {
       <div className="text-center p-8">
         <SplitText 
           tag="h1"
-          text="Welcome to My Portfolio"
+          text="portfolio"
           splitType="chars"
           delay={50}
-          className="text-5xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600 mb-4"
+          className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-luckiest-guy font-medium text-white mb-4"
         />
         
         <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-8 animate-fade-in-up">

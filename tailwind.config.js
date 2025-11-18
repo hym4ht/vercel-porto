@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'luckiest-guy': ['Luckiest Guy', 'sans-serif'], 
+        'landasans': ['Landasans Medium', 'sans-serif'],
       },
     },
   },

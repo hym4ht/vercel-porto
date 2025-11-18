@@ -2,7 +2,7 @@ function About() {
   const skills = ["React", "JavaScript (ES6+)", "Node.js", "Tailwind CSS", "Figma", "Vite"];
 
   return (
-    <div className="min-h-[calc(100vh-128px)] text-white p-4 md:p-8">
+    <div className="min-h-[calc(100vh-128px)] text-white p-4 md:p-8 mt-40">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600">
           About Me

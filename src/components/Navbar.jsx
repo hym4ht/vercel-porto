@@ -7,21 +7,21 @@ function Navbar() {
 
   const getNavLinkClass = ({ isActive }) => {
     return isActive
-      ? "text-white bg-black/20" // Style jika AKTIF
-      : "text-slate-300 hover:text-white hover:bg-black/20"; // Style jika TIDAK AKTIF
+      ? "text-white bg-black/20"
+      : "text-slate-300 hover:text-white hover:bg-black/20"; 
   };
 
-  const commonLinkProps = "px-3 py-2 rounded-md text-sm font-medium transition-colors";
+  const commonLinkProps = "px-2 py-1 rounded-md text-sm font-medium transition-colors";
 
   return (
-    <nav className="sticky top-4 z-50 mx-auto max-w-5xl rounded-full bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg">
+    <nav className="sticky top-8 z-50 mx-auto max-w-6xl rounded-full bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center gap-2 text-white text-xl font-bold">
               <Code className="w-7 h-7" />
-              <span>My Portfolio</span>
+              <span>Hym4ht</span>
             </Link>
           </div>
 

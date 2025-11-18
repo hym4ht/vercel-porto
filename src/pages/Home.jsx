@@ -1,7 +1,4 @@
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import SplitText from '../assets/components/SplitText';
-import About from './About';
 
 function Home() {
   return (
@@ -25,32 +22,10 @@ function Home() {
           </div>
         </div>
       </section>
-      <About />
     </div>
 
   );
   
 }
-
-
-const style = document.createElement('style');
-style.innerHTML = `
-  @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  .animate-fade-in-up { animation: fade-in-up 0.8s ease-out 0.8s forwards; opacity: 0; }
-  .animate-fade-in { animation: fade-in 1s ease-out 1.2s forwards; opacity: 0; }
-`;
-
-const oldStyle = document.querySelector('style[data-gemini-style]');
-if (oldStyle) oldStyle.remove();
-style.setAttribute('data-gemini-style', 'true');
-document.head.appendChild(style);
-
 
 export default Home;

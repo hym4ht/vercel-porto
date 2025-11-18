@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { useState, useContext } from 'react';
+import { LenisContext } from '../context/LenisContext';
 import { Menu, X, Code } from 'lucide-react'; // Menggunakan ikon untuk tampilan yang lebih baik
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const lenis = useContext(LenisContext);
 
-  const getNavLinkClass = ({ isActive }) => {
-    return isActive
-      ? "text-white bg-black/20"
-      : "text-slate-300 hover:text-white hover:bg-black/20"; 
+  const handleClick = (e, target) => {
+    e.preventDefault();
+    lenis?.scrollTo(target, { offset: -80 });
+    setIsOpen(false);
   };
 
   const commonLinkProps = "px-2 py-1 rounded-md text-sm font-medium transition-colors";
@@ -19,7 +20,7 @@ function Navbar() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
      <div className="flex-shrink-0">
-  <Link to="/" className="flex items-center gap-2 text-white text-xl font-bold">
+  <a href="#home" onClick={(e) => handleClick(e, '#home')} className="flex items-center gap-2 text-white text-xl font-bold">
     <img 
       src="/figma.png"
       alt="Profile"
@@ -27,32 +28,33 @@ function Navbar() {
     />
  
               <span>Hym4ht</span>
-                 </Link>
+                 </a>
           </div>
 
           {/* Navigasi Desktop */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink to="/" className={(props) => `${commonLinkProps} ${getNavLinkClass(props)}`}>
+              <a href="#home" onClick={(e) => handleClick(e, '#home')} className={`${commonLinkProps} text-slate-300 hover:text-white hover:bg-black/20`}>
                 Home
-              </NavLink>
-              <NavLink to="/about" className={(props) => `${commonLinkProps} ${getNavLinkClass(props)}`}>
+              </a>
+              <a href="#about" onClick={(e) => handleClick(e, '#about')} className={`${commonLinkProps} text-slate-300 hover:text-white hover:bg-black/20`}>
                 About
-              </NavLink>
-              <NavLink to="/projects" className={(props) => `${commonLinkProps} ${getNavLinkClass(props)}`}>
+              </a>
+              <a href="#projects" onClick={(e) => handleClick(e, '#projects')} className={`${commonLinkProps} text-slate-300 hover:text-white hover:bg-black/20`}>
                 Projects
-              </NavLink>
+              </a>
             </div>
           </div>
           
           {/* Tombol CTA Desktop */}
           <div className="hidden md:block">
-             <Link 
-                to="/contact" 
+             <a 
+                href="#contact" 
+                onClick={(e) => handleClick(e, '#contact')}
                 className="ml-4 px-4 py-2 rounded-full text-sm font-semibold text-black bg-white hover:bg-slate-200 transition-all"
               >
                 Contact Me
-              </Link>
+              </a>
           </div>
 
           {/* Tombol Menu Mobile */}
@@ -73,23 +75,24 @@ function Navbar() {
 
       {/* Menu Mobile */}
       {isOpen && (
-        <div className="md:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <NavLink to="/" className={(props) => `block ${commonLinkProps} ${getNavLinkClass(props)}`}>
+        <div className="absolute top-full mt-2 w-full rounded-xl md:hidden bg-white/10 backdrop-blur-lg border border-white/20" id="mobile-menu">
+          <div className="space-y-1 p-4">
+            <a href="#home" onClick={(e) => handleClick(e, '#home')} className={`block ${commonLinkProps} text-slate-300 hover:text-white hover:bg-black/20`}>
               Home
-            </NavLink>
-            <NavLink to="/about" className={(props) => `block ${commonLinkProps} ${getNavLinkClass(props)}`}>
+            </a>
+            <a href="#about" onClick={(e) => handleClick(e, '#about')} className={`block ${commonLinkProps} text-slate-300 hover:text-white hover:bg-black/20`}>
               About
-            </NavLink>
-            <NavLink to="/projects" className={(props) => `block ${commonLinkProps} ${getNavLinkClass(props)}`}>
+            </a>
+            <a href="#projects" onClick={(e) => handleClick(e, '#projects')} className={`block ${commonLinkProps} text-slate-300 hover:text-white hover:bg-black/20`}>
               Projects
-            </NavLink>
-            <Link 
-              to="/contact" 
+            </a>
+            <a 
+              href="#contact" 
+              onClick={(e) => handleClick(e, '#contact')}
               className="block w-full text-left mt-2 px-3 py-2 rounded-md text-base font-medium text-black bg-white hover:bg-slate-200 transition-all"
             >
               Contact Me
-            </Link>
+            </a>
           </div>
         </div>
       )}

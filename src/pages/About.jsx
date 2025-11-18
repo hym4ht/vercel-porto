@@ -7,7 +7,7 @@ function About() {
         <h2 className="text-4xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600">
           About Me
         </h2>
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 shadow-lg">
+        <div className="p-8 shadow-lg">
           <p className="text-slate-300 leading-relaxed mb-4">
             Hello! I'm a passionate front-end developer with a keen eye for design and a love for creating intuitive, dynamic user experiences. My journey in web development started with a simple "Hello World" and has since grown into a full-fledged passion for building beautiful and functional web applications.
           </p>

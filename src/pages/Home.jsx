@@ -15,10 +15,10 @@ function Home() {
             text="PORTFOLIO"
             splitType="chars"
             delay={50}
-            className="text-[12rem] md:text-[12rem] lg:text-[16rem] font-landasans font-hype-heavy text-white mb-4"
+            className="text-7xl md:text-9xl lg:text-[12rem] xl:text-[16rem] font-landasans font-hype-heavy text-white mb-4"
           />
           
-          <p className="text-lg md:text-[2xl] text-slate-300 max-w-2xl mx-auto mb-8 animate-fade-in-up">
+          <p className="text-base md:text-xl text-slate-300 max-w-2xl mx-auto mb-8 animate-fade-in-up">
             A creative space where ideas turn into reality. Explore my projects and get to know more about my passion for development and design.
           </p>
           <div className="flex justify-center gap-4 animate-fade-in">

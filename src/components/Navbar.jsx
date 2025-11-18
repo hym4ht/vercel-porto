@@ -18,11 +18,16 @@ function Navbar() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center gap-2 text-white text-xl font-bold">
-              <Code className="w-7 h-7" />
+     <div className="flex-shrink-0">
+  <Link to="/" className="flex items-center gap-2 text-white text-xl font-bold">
+    <img 
+      src="/figma.png"
+      alt="Profile"
+      className="w-9 h-9 rounded-full object-cover"
+    />
+ 
               <span>Hym4ht</span>
-            </Link>
+                 </Link>
           </div>
 
           {/* Navigasi Desktop */}

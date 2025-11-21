@@ -19,8 +19,8 @@ function App() {
         <div className="relative z-10">
           <Navbar />
 
-          <main className="container mx-auto p-4">
-   
+          <main>
+
             <section id="home" className="scroll-mt-20">
               <Home />
             </section>

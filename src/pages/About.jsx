@@ -9,13 +9,12 @@ function About() {
       <ParallaxGallery />
 
       {/* Content */}
-      {/* Ganti min-h-[calc(100vh-128px)] menjadi min-h-screen dan tambahkan padding bawah yang sangat besar (pb-[200px]) */}
-      <div className="relative z-10 min-h-screen text-white p-4 md:p-8 mt-40 pb-[200px]">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-10 min-h-screen text-white p-4 md:p-8 mt-60 pb-[200px]">
+        <div className="max-w-4xl mx-auto mt-20">
           <h2 className="text-4xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600">
             About Me
           </h2>
-          <div className="p-8 shadow-lg backdrop-blur-sm bg-slate-900/50 rounded-xl border border-slate-800">
+          <div className="">
             <p className="text-slate-300 leading-relaxed mb-4">
               Hello! I'm a passionate front-end developer with a keen eye for design and a love for creating intuitive, dynamic user experiences. My journey in web development started with a simple "Hello World" and has since grown into a full-fledged passion for building beautiful and functional web applications.
             </p>
@@ -24,6 +23,8 @@ function About() {
             </p>
 
             <h3 className="text-2xl font-semibold mb-4 text-white">My Skills</h3>
+          
+          </div>
             <div id="skills-container" className="flex flex-wrap gap-3 relative">
 
               {skills.map((skill, index) => {
@@ -52,9 +53,10 @@ function About() {
                 );
               })}
             </div>
-          </div>
         </div>
+        
       </div>
+      
     </div>
   );
 }

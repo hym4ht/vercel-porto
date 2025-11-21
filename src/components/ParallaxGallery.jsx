@@ -5,13 +5,13 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const getImages = (start, count) => 
+const getImages = (start, count) =>
     Array.from({ length: count }).map((_, i) => `https://picsum.photos/300/200?random=${start + i}`);
 
 const galleryData = [
-    { images: getImages(0, 6), opacity: 'opacity-20', top: 'top-[20%]', direction: -300 }, 
-    { images: getImages(10, 6), opacity: 'opacity-60', top: 'top-[45%]', direction: 300 }, 
-    { images: getImages(20, 6), opacity: 'opacity-80', top: 'top-[70%]', direction: -300 }, 
+    { images: getImages(0, 6), opacity: 'opacity-20', top: 'top-[20%]', direction: -300 },
+    { images: getImages(10, 6), opacity: 'opacity-40', top: 'top-[45%]', direction: 300 },
+    { images: getImages(20, 6), opacity: 'opacity-70', top: 'top-[70%]', direction: -300 },
 ];
 
 function ParallaxGallery() {
@@ -28,29 +28,35 @@ function ParallaxGallery() {
             },
         });
 
+        // Add opacity animation to the timeline
+        tl.fromTo(containerRef.current, { opacity: 0 }, { opacity: 0.5, duration: 0.4 }, 0);
+
         galleryData.forEach((row, index) => {
             tl.to(
-                rowRefs[index].current, 
-                { x: row.direction, ease: "none" }, 
+                rowRefs[index].current,
+                { x: row.direction, ease: "none" },
                 0
             );
         });
     }, { scope: containerRef });
 
-    const imageSizeClasses = "w-96 h-70"; 
-    const rowLayoutClasses = "w-[200%] -ml-[50%]"; 
+    const imageSizeClasses = "w-96 h-70";
+    const rowLayoutClasses = "w-[200%] -ml-[50%]";
 
     return (
-        <div ref={containerRef} className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+            ref={containerRef}
+            className="absolute inset-0 overflow-hidden pointer-events-none opacity-0 [mask-image:linear-gradient(to_bottom,transparent_0%,black_60%,black_100%)]"
+        >
             {galleryData.map((row, index) => (
-                <div 
+                <div
                     key={index}
-                    ref={rowRefs[index]} 
+                    ref={rowRefs[index]}
                     className={`absolute flex gap-2 select-none ${row.top} ${rowLayoutClasses} ${row.opacity}`}
                 >
                     {[...row.images, ...row.images].map((src, i) => (
-                        <div 
-                            key={i} 
+                        <div
+                            key={i}
                             className={`flex-shrink-0 ${imageSizeClasses} rounded-lg overflow-hidden transition-all duration-500`}
                         >
                             <img src={src} alt="" className="w-full h-full object-cover" />

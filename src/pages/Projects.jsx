@@ -27,8 +27,9 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="min-h-[calc(100vh-128px)] text-white p-4 md:p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-[calc(100vh-128px)] text-white p-4 md:px-10">
+      
+      <div className="max-w-6xl mx-auto pt-40"> 
         <h2 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600">
           My Projects
         </h2>

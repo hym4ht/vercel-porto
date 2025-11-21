@@ -37,7 +37,7 @@ function ParallaxGallery() {
         });
     }, { scope: containerRef });
 
-    const imageSizeClasses = "w-96 h-60"; 
+    const imageSizeClasses = "w-96 h-70"; 
     const rowLayoutClasses = "w-[200%] -ml-[50%]"; 
 
     return (

@@ -8,7 +8,8 @@ function About() {
       <ParallaxGallery />
 
       {/* Content */}
-      <div className="relative z-10 min-h-[calc(100vh-128px)] text-white p-4 md:p-8 mt-40">
+      {/* Ganti min-h-[calc(100vh-128px)] menjadi min-h-screen dan tambahkan padding bawah yang sangat besar (pb-[200px]) */}
+      <div className="relative z-10 min-h-screen text-white p-4 md:p-8 mt-40 pb-[200px]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600">
             About Me

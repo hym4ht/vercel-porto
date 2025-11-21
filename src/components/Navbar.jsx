@@ -8,7 +8,7 @@ function Navbar() {
 
   const handleClick = (e, target) => {
     e.preventDefault();
-    lenis?.scrollTo(target, { offset: -80 });
+    lenis?.scrollTo(target, { offset: 85 });
     setIsOpen(false);
   };
 
@@ -19,16 +19,16 @@ function Navbar() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
-     <div className="flex-shrink-0">
-  <a href="#home" onClick={(e) => handleClick(e, '#home')} className="flex items-center gap-2 text-white text-xl font-bold">
-    <img 
-      src="/figma.png"
-      alt="Profile"
-      className="w-9 h-9 rounded-full object-cover"
-    />
- 
+          <div className="flex-shrink-0">
+            <a href="#home" onClick={(e) => handleClick(e, '#home')} className="flex items-center gap-2 text-white text-xl font-bold">
+              <img
+                src="/figma.png"
+                alt="Profile"
+                className="w-9 h-9 rounded-full object-cover"
+              />
+
               <span>Hym4ht</span>
-                 </a>
+            </a>
           </div>
 
           {/* Navigasi Desktop */}
@@ -45,16 +45,16 @@ function Navbar() {
               </a>
             </div>
           </div>
-          
+
           {/* Tombol CTA Desktop */}
           <div className="hidden md:block">
-             <a 
-                href="#contact" 
-                onClick={(e) => handleClick(e, '#contact')}
-                className="ml-4 px-4 py-2 rounded-full text-sm font-semibold text-black bg-white hover:bg-slate-200 transition-all"
-              >
-                Contact Me
-              </a>
+            <a
+              href="#contact"
+              onClick={(e) => handleClick(e, '#contact')}
+              className="ml-4 px-4 py-2 rounded-full text-sm font-semibold text-black bg-white hover:bg-slate-200 transition-all"
+            >
+              Contact Me
+            </a>
           </div>
 
           {/* Tombol Menu Mobile */}
@@ -86,8 +86,8 @@ function Navbar() {
             <a href="#projects" onClick={(e) => handleClick(e, '#projects')} className={`block ${commonLinkProps} text-slate-300 hover:text-white hover:bg-black/20`}>
               Projects
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               onClick={(e) => handleClick(e, '#contact')}
               className="block w-full text-left mt-2 px-3 py-2 rounded-md text-base font-medium text-black bg-white hover:bg-slate-200 transition-all"
             >

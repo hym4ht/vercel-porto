@@ -1,9 +1,9 @@
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A modern, responsive e-commerce front-end built with React and Tailwind CSS, featuring a full shopping cart and product filtering.",
+    title: "Portfolio Website Design",
+    description: "A modern, responsive front-end built with React and Tailwind CSS, featuring a full interractive.",
     tags: ["React", "Tailwind CSS", "Vite"],
-    image: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600"
+    image: "./portfolio-project.png"
   },
   {
     title: "Task Management App",

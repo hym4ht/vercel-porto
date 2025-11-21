@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'luckiest-guy': ['Luckiest Guy', 'sans-serif'], 
+        'luckiest-guy': ['Luckiest Guy', 'sans-serif'],
         'landasans': ['Landasans Medium', 'sans-serif'],
+      },
+      translate: {
+        '101': '101%',
       },
     },
   },

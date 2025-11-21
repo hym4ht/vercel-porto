@@ -5,6 +5,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Aurora from './components/Aurora';
+import FlowingMenu from './components/FlowingMenu';
 
 import './App.css';
 
@@ -27,6 +28,9 @@ function App() {
 
             <section id="about" className="scroll-mt-20">
               <About />
+            </section>
+            <section>
+              <FlowingMenu />
             </section>
 
             <section id="projects" className="scroll-mt-20">

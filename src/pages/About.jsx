@@ -1,7 +1,8 @@
 import ParallaxGallery from '../components/ParallaxGallery';
+import StickerPeel from '../components/StickerPeel';
 
 function About() {
-  const skills = ["React", "JavaScript (ES6+)", "Node.js", "Tailwind CSS", "Figma", "Vite"];
+  const skills = ["React", "JavaScript (ES6+)", "Tailwind CSS", "Figma", "Vite", "PHP", "HTML", "CSS"];
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -23,12 +24,33 @@ function About() {
             </p>
 
             <h3 className="text-2xl font-semibold mb-4 text-white">My Skills</h3>
-            <div className="flex flex-wrap gap-3">
-              {skills.map(skill => (
-                <span key={skill} className="bg-cyan-400/10 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full border border-cyan-400/30">
-                  {skill}
-                </span>
-              ))}
+            <div id="skills-container" className="flex flex-wrap gap-3 relative">
+
+              {skills.map((skill, index) => {
+                const logoMap = {
+                  "React": "/react.svg",
+                  "JavaScript (ES6+)": "/javascript.png",
+                  "Tailwind CSS": "/tailwindcss.png",
+                  "Figma": "/figma.png",
+                  "Vite": "/vite.svg",
+                  "PHP": "/phpicon.png",
+                  "HTML": "/htmlicon.png",
+                  "CSS": "/cssicon.png"
+                };
+
+                return (
+                  <div key={skill} className="relative w-24 h-24 -mt-4 -ml-2 z-10">
+                    <StickerPeel
+                      imageSrc={logoMap[skill]}
+                      width={80}
+                      rotate={0}
+                      peelDirection={30 + (index * 10)} // Variasi arah peel
+                      initialPosition={{ x: 0, y: 0 }}
+                      bounds="#skills-container"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
